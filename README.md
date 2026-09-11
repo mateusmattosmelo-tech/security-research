@@ -1,33 +1,57 @@
 # Security Research
 
-A working journal of my application & web security research — recon, methodology,
-tooling, and write-ups. This repo documents the **whole path**, not just the findings:
-the hypotheses that went nowhere are part of the craft.
+A working journal of my application & web security research — recon, methodology, tooling, and
+write-ups. This repo documents the **whole path**, not just the findings: the map I build, the
+hypotheses I test, and the ones that go nowhere are all part of the craft.
 
-## What's in here
+## Methodology
 
-| Folder | What it holds |
-|---|---|
-| [`methodology/`](methodology/) | How I approach a target — recon checklists, testing playbooks, notes I reuse. |
-| [`tools/`](tools/) | Small scripts I write while hunting (recon helpers, parsers, PoC scaffolds). |
-| [`targets/`](targets/) | Per-engagement journals — scope, recon output, hypotheses, what was tested. |
-| [`writeups/`](writeups/) | Finished, sanitized write-ups of confirmed findings and CTF/lab solutions. |
+Reusable playbooks, refined on real (authorized) engagements.
 
-## Ground rules I hold myself to
+**Recon & mapping**
+- [Recon playbook](methodology/recon-playbook.md)
+- [Recon from a target's open source](methodology/recon-from-open-source.md)
+- [Attack-surface mapping](methodology/attack-surface-mapping.md)
+- [Building an API inventory for authz testing](methodology/api-inventory-for-authz.md)
 
-- **Only authorized targets.** Public/private bug bounty programs, CTFs, labs, or systems I own.
-  Scope is checked against each program's policy before a single request goes out.
-- **Coordinated disclosure.** Details of a real vulnerability in a third-party system are
-  published only after it's fixed and disclosure is permitted. Until then, only sanitized
-  methodology lives here.
-- **No secrets, no PII.** Credentials, session tokens, and personal data never get committed
-  (see [`.gitignore`](.gitignore)). Evidence is masked before it's written down.
+**Auth & access**
+- [Authorization testing (IDOR/BOLA/privesc)](methodology/authorization-testing.md)
+- [OAuth 2.0 / OIDC testing](methodology/oauth-oidc-testing.md)
+- [Auditing a JWT verification implementation](methodology/auditing-jwt-verification.md)
+- [Multi-tenant isolation testing](methodology/multi-tenant-isolation.md)
+- [Testing a hosted MCP server](methodology/mcp-server-security.md)
 
-## About me
+**Web / API / infra**
+- [API security testing (REST & GraphQL)](methodology/api-security-testing.md)
+- [Business logic testing](methodology/business-logic.md)
+- [SSRF hunting](methodology/ssrf-hunting.md)
+- [Subdomain takeover](methodology/subdomain-takeover.md)
+- [Dependency confusion](methodology/dependency-confusion.md)
+- [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
-Application security researcher focused on authentication, authorization, and business-logic
-flaws. Reachable through the profile that owns this repo.
+**Craft**
+- [Scope & disclosure hygiene](methodology/scope-and-disclosure-hygiene.md)
+- [Writing a vulnerability report that doesn't get downgraded](methodology/writing-a-vulnerability-report.md)
+
+## Tools
+
+Small, self-contained scripts — see [`tools/`](tools/) for the full index.
+`ct_recon` · `takeover_scan` · `js_endpoints` · `header_audit` · `cors_probe` ·
+`oauth_redirect_probe` · `workflow_audit`
+
+## Write-ups
+
+Finished, sanitized write-ups of confirmed findings (post-disclosure) and CTF/lab solutions live
+in [`writeups/`](writeups/).
+
+## Ground rules
+
+- **Only authorized targets** — bug bounty programs in scope, CTFs, labs, or systems I own.
+- **Coordinated disclosure** — third-party vulnerability details are published only after they're
+  fixed and disclosure is permitted; until then, only sanitized methodology.
+- **No secrets, no PII** — credentials, tokens, and personal data never get committed
+  (see [`.gitignore`](.gitignore)); evidence is masked before it's written down.
 
 ---
-*This repository is a portfolio of authorized security research. Nothing here is a how-to for
-attacking systems you don't have permission to test.*
+*A portfolio of authorized security research. Nothing here is a how-to for attacking systems you
+don't have permission to test.*
