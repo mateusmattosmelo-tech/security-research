@@ -1,0 +1,30 @@
+# === Secrets & credentials — NEVER commit ===
+*.env
+.env*
+*.pem
+*.key
+*.p12
+*.keystore
+id_rsa*
+*_token*
+*secret*
+*password*
+*credential*
+accounts.json
+cookies.txt
+*.har          # HTTP archives frequently contain live session cookies
+
+# === Raw evidence that may hold PII / session data ===
+evidence/raw/
+**/_private/
+**/_quarantine/
+
+# === OS / editor noise ===
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+node_modules/
