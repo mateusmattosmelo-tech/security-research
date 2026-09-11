@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""
+workflow_audit.py — flag risky patterns in GitHub Actions workflow files.
+
+Two classic bug classes:
+  1. Script injection — untrusted event data (PR title, branch name, issue body) interpolated
+     directly into a `run:` block as ${{ ... }}, giving an attacker shell execution.
+  2. Pwn request — a `pull_request_target` / `workflow_run` workflow (which runs with secrets and
+     a write token) that checks out and executes the PR's untrusted code.
+
+This is a static heuristic to triage which workflows to read closely — not a proof of exploit.
+
+Usage:
+    python3 workflow_audit.py path/to/.github/workflows/
+    python3 workflow_audit.py file.yml
+"""
+import os
+import re
+import sys
+
+# event fields an attacker controls, when interpolated into run: => injection
+TAINTED = re.compile(
+    r"\$\{\{\s*github\.event\.(pull_request\.(title|body|head\.ref|head\.label)"
+    r"|issue\.(title|body)|comment\.body|review\.body|"
+    r"head_commit\.message|pages\.\*\.page_name)\s*\}\}"
+)
+PRIV_TRIGGER = re.compile(r"^\s*(pull_request_target|workflow_run)\s*:", re.M)
+CHECKOUT_PR = re.compile(r"ref:\s*\$\{\{\s*github\.event\.pull_request\.head", re.M)
+
+
+def audit(path, text):
+    findings = []
+    priv = bool(PRIV_TRIGGER.search(text))
+    # injection: tainted expression inside a run: block
+    in_run = False
+    for i, line in enumerate(text.splitlines(), 1):
+        if re.match(r"\s*run:\s*", line):
+            in_run = True
+        elif re.match(r"\s*\w[\w-]*:\s*", line) and "run:" not in line and not line.strip().startswith("-"):
+            in_run = False
+        if in_run and TAINTED.search(line):
+            findings.append((i, "script-injection", line.strip()[:80]))
+    if priv and CHECKOUT_PR.search(text):
+        findings.append((0, "pwn-request",
+                         "privileged trigger checks out PR head code"))
+    elif priv:
+        findings.append((0, "privileged-trigger",
+                         "pull_request_target/workflow_run — verify it never runs PR code"))
+    return findings
+
+
+def walk(target):
+    if os.path.isfile(target):
+        yield target
+    else:
+        for root, _, files in os.walk(target):
+            for f in files:
+                if f.endswith((".yml", ".yaml")):
+                    yield os.path.join(root, f)
+
+
+def main(argv):
+    if len(argv) != 2:
+        print(__doc__.strip())
+        return 1
+    any_found = False
+    for path in walk(argv[1]):
+        text = open(path, errors="ignore").read()
+        for line, kind, detail in audit(path, text):
+            any_found = True
+            loc = f"{path}:{line}" if line else path
+            print(f"[{kind}] {loc}\n    {detail}")
+    if not any_found:
+        print("no risky patterns matched (still read privileged workflows by hand)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
