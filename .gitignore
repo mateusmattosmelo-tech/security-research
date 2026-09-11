@@ -28,3 +28,8 @@ Thumbs.db
 __pycache__/
 *.pyc
 node_modules/
+
+# === PRIVATE ENGAGEMENT — never publish (NDA) ===
+targets/credify/
+targets/upgrade/
+targets/neon/
