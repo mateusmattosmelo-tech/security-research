@@ -21,6 +21,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Auditing a JWT verification implementation](methodology/auditing-jwt-verification.md)
 - [Multi-tenant isolation testing](methodology/multi-tenant-isolation.md)
 - [Testing a hosted MCP server](methodology/mcp-server-security.md)
+- [LLM application security](methodology/llm-application-security.md)
 - [SAML / SSO security](methodology/saml-sso-security.md)
 
 **Web / API / infra**
@@ -40,6 +41,8 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [HTTP request smuggling](methodology/request-smuggling.md)
 - [CSRF & clickjacking](methodology/csrf-and-clickjacking.md)
 - [Open redirect](methodology/open-redirect.md)
+- [CRLF / header injection](methodology/crlf-injection.md)
+- [Cloud storage misconfiguration](methodology/cloud-storage-misconfig.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
@@ -53,7 +56,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 
 Small, self-contained scripts — see [`tools/`](tools/) for the full index.
 `ct_recon` · `takeover_scan` · `js_endpoints` · `header_audit` · `cors_probe` ·
-`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff` · `jwt_none_forge` · `authz_matrix` · `report_pack`
+`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff` · `jwt_none_forge` · `authz_matrix` · `report_pack` · `csp_analyze`
 
 ## Write-ups
 
