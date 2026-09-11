@@ -45,10 +45,12 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Cloud storage misconfiguration](methodology/cloud-storage-misconfig.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
+- [CI/CD & supply-chain security](methodology/cicd-supply-chain.md)
 
 **Craft**
 - [Secure code review](methodology/secure-code-review.md)
 - [Secrets scanning](methodology/secrets-scanning.md)
+- [Enumeration within scope](methodology/enumeration-within-scope.md)
 - [Scope & disclosure hygiene](methodology/scope-and-disclosure-hygiene.md)
 - [Writing a vulnerability report that doesn't get downgraded](methodology/writing-a-vulnerability-report.md)
 
