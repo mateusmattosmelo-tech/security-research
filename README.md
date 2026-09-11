@@ -57,7 +57,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 ## Deep dives
 
 Byte-level, mechanic-first treatments — see [`deep-dives/`](deep-dives/).
-`jwt-attacks` · `ssrf-cloud-and-internal` · `oauth-attacks` · `sql-injection`
+`jwt-attacks` · `ssrf-cloud-and-internal` · `oauth-attacks` · `sql-injection` · `xss-advanced` · `request-smuggling` · `prototype-pollution-rce`
 
 ## Tools
 

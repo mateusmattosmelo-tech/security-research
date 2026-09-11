@@ -11,3 +11,6 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [SSRF to cloud metadata & internal services](ssrf-cloud-and-internal.md)
 - [OAuth 2.0 attacks](oauth-attacks.md)
 - [SQL injection](sql-injection.md)
+- [Advanced XSS](xss-advanced.md)
+- [HTTP request smuggling](request-smuggling.md)
+- [Prototype pollution to RCE](prototype-pollution-rce.md)
