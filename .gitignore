@@ -33,3 +33,6 @@ node_modules/
 targets/credify/
 targets/upgrade/
 targets/neon/
+
+# methodology notes whose names trip the secret patterns above
+!methodology/secrets-scanning.md
