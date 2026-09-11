@@ -23,13 +23,16 @@ Reusable playbooks, refined on real (authorized) engagements.
 
 **Web / API / infra**
 - [API security testing (REST & GraphQL)](methodology/api-security-testing.md)
+- [GraphQL security testing](methodology/graphql-security-testing.md)
 - [Business logic testing](methodology/business-logic.md)
+- [Race conditions](methodology/race-conditions.md)
 - [SSRF hunting](methodology/ssrf-hunting.md)
 - [Subdomain takeover](methodology/subdomain-takeover.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
 **Craft**
+- [Secure code review](methodology/secure-code-review.md)
 - [Scope & disclosure hygiene](methodology/scope-and-disclosure-hygiene.md)
 - [Writing a vulnerability report that doesn't get downgraded](methodology/writing-a-vulnerability-report.md)
 
