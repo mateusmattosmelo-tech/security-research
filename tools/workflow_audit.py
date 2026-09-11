@@ -31,15 +31,23 @@ CHECKOUT_PR = re.compile(r"ref:\s*\$\{\{\s*github\.event\.pull_request\.head", r
 def audit(path, text):
     findings = []
     priv = bool(PRIV_TRIGGER.search(text))
-    # injection: tainted expression inside a run: block
+    # injection: any tainted event field interpolated into the workflow. Strongest inside a
+    # run: block (shell execution); flagged everywhere because it's attacker-controlled input.
+    lines = text.splitlines()
+    run_lines = set()
     in_run = False
-    for i, line in enumerate(text.splitlines(), 1):
-        if re.match(r"\s*run:\s*", line):
+    for i, line in enumerate(lines, 1):
+        stripped = line.strip()
+        if re.match(r"\s*-?\s*run:\s*", line):
             in_run = True
-        elif re.match(r"\s*\w[\w-]*:\s*", line) and "run:" not in line and not line.strip().startswith("-"):
+        elif re.match(r"\s*[\w-]+:\s*", line) and not stripped.startswith("-"):
             in_run = False
-        if in_run and TAINTED.search(line):
-            findings.append((i, "script-injection", line.strip()[:80]))
+        if in_run:
+            run_lines.add(i)
+    for i, line in enumerate(lines, 1):
+        if TAINTED.search(line):
+            kind = "script-injection" if i in run_lines else "tainted-expression"
+            findings.append((i, kind, line.strip()[:80]))
     if priv and CHECKOUT_PR.search(text):
         findings.append((0, "pwn-request",
                          "privileged trigger checks out PR head code"))
