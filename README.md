@@ -36,6 +36,10 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [WebSocket security](methodology/websocket-security.md)
 - [Prototype pollution](methodology/prototype-pollution.md)
 - [Insecure deserialization](methodology/insecure-deserialization.md)
+- [XXE (XML external entities)](methodology/xxe.md)
+- [HTTP request smuggling](methodology/request-smuggling.md)
+- [CSRF & clickjacking](methodology/csrf-and-clickjacking.md)
+- [Open redirect](methodology/open-redirect.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
