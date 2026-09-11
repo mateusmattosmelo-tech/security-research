@@ -13,6 +13,9 @@ authorized to test, with any required research/identification header set.
 | `cors_probe.py` | Detect reflected-Origin-with-credentials CORS misconfig. | yes |
 | `oauth_redirect_probe.py` | Test redirect_uri validation on an OAuth authorize endpoint. | yes |
 | `workflow_audit.py` | Flag GitHub Actions injection / pwn-request patterns (static). | no |
+| `jwt_decode.py` | Decode a JWT and flag risky settings (alg=none, no exp, kid). | no |
+| `wellknown_scan.py` | Probe discovery/metadata endpoints (.well-known, health, openapi). | yes |
+| `openapi_diff.py` | Diff two OpenAPI specs to spot added/removed operations. | no |
 
 ## Conventions
 - Read-only by default; anything that touches the network says so.
