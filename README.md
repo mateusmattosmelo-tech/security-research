@@ -28,11 +28,15 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Race conditions](methodology/race-conditions.md)
 - [SSRF hunting](methodology/ssrf-hunting.md)
 - [Subdomain takeover](methodology/subdomain-takeover.md)
+- [Web cache poisoning & host-header](methodology/cache-poisoning-and-host-header.md)
+- [File upload testing](methodology/file-upload-testing.md)
+- [XSS in single-page apps](methodology/xss-in-spas.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
 **Craft**
 - [Secure code review](methodology/secure-code-review.md)
+- [Secrets scanning](methodology/secrets-scanning.md)
 - [Scope & disclosure hygiene](methodology/scope-and-disclosure-hygiene.md)
 - [Writing a vulnerability report that doesn't get downgraded](methodology/writing-a-vulnerability-report.md)
 
