@@ -14,3 +14,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Advanced XSS](xss-advanced.md)
 - [HTTP request smuggling](request-smuggling.md)
 - [Prototype pollution to RCE](prototype-pollution-rce.md)
+- [Server-side template injection (SSTI)](ssti.md)
+- [Deserialization & gadget chains](deserialization-gadgets.md)
