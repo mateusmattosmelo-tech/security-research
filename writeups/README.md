@@ -13,3 +13,5 @@ Finished, sanitized write-ups. Two kinds live here:
 - [SSRF](portswigger-ssrf.md)
 - [Authentication](portswigger-authentication.md)
 - [Cross-site scripting (XSS)](portswigger-xss.md)
+- [XXE](portswigger-xxe.md)
+- [Business logic](portswigger-business-logic.md)

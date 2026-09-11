@@ -63,6 +63,8 @@ Small, self-contained scripts — see [`tools/`](tools/) for the full index.
 Finished, sanitized write-ups of confirmed findings (post-disclosure) and CTF/lab solutions live
 in [`writeups/`](writeups/).
 
+See also [references & reading](references.md).
+
 ## Ground rules
 
 - **Only authorized targets** — bug bounty programs in scope, CTFs, labs, or systems I own.
