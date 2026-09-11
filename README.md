@@ -11,6 +11,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 **Recon & mapping**
 - [Recon playbook](methodology/recon-playbook.md)
 - [Recon from a target's open source](methodology/recon-from-open-source.md)
+- [Mobile app recon (APK/IPA)](methodology/mobile-app-recon.md)
 - [Attack-surface mapping](methodology/attack-surface-mapping.md)
 - [Building an API inventory for authz testing](methodology/api-inventory-for-authz.md)
 
@@ -20,6 +21,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Auditing a JWT verification implementation](methodology/auditing-jwt-verification.md)
 - [Multi-tenant isolation testing](methodology/multi-tenant-isolation.md)
 - [Testing a hosted MCP server](methodology/mcp-server-security.md)
+- [SAML / SSO security](methodology/saml-sso-security.md)
 
 **Web / API / infra**
 - [API security testing (REST & GraphQL)](methodology/api-security-testing.md)
@@ -31,6 +33,9 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Web cache poisoning & host-header](methodology/cache-poisoning-and-host-header.md)
 - [File upload testing](methodology/file-upload-testing.md)
 - [XSS in single-page apps](methodology/xss-in-spas.md)
+- [WebSocket security](methodology/websocket-security.md)
+- [Prototype pollution](methodology/prototype-pollution.md)
+- [Insecure deserialization](methodology/insecure-deserialization.md)
 - [Dependency confusion](methodology/dependency-confusion.md)
 - [Auditing GitHub Actions workflows](methodology/github-actions-security.md)
 
@@ -44,7 +49,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 
 Small, self-contained scripts — see [`tools/`](tools/) for the full index.
 `ct_recon` · `takeover_scan` · `js_endpoints` · `header_audit` · `cors_probe` ·
-`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff`
+`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff` · `jwt_none_forge` · `authz_matrix`
 
 ## Write-ups
 
