@@ -18,6 +18,7 @@ authorized to test, with any required research/identification header set.
 | `openapi_diff.py` | Diff two OpenAPI specs to spot added/removed operations. | no |
 | `jwt_none_forge.py` | Build alg:none / unsigned JWT variants to test signature validation. | no |
 | `authz_matrix.py` | Two-account BOLA test runner (A vs B vs anon over a URL list). | yes |
+| `report_pack.py` | Turn an evidence folder into a report skeleton + attachment manifest. | no |
 
 ## Conventions
 - Read-only by default; anything that touches the network says so.

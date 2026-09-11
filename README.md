@@ -49,7 +49,7 @@ Reusable playbooks, refined on real (authorized) engagements.
 
 Small, self-contained scripts — see [`tools/`](tools/) for the full index.
 `ct_recon` · `takeover_scan` · `js_endpoints` · `header_audit` · `cors_probe` ·
-`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff` · `jwt_none_forge` · `authz_matrix`
+`oauth_redirect_probe` · `workflow_audit` · `jwt_decode` · `wellknown_scan` · `openapi_diff` · `jwt_none_forge` · `authz_matrix` · `report_pack`
 
 ## Write-ups
 

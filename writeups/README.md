@@ -11,3 +11,5 @@ Finished, sanitized write-ups. Two kinds live here:
 - [Access control](portswigger-access-control.md)
 - [SQL injection](portswigger-sql-injection.md)
 - [SSRF](portswigger-ssrf.md)
+- [Authentication](portswigger-authentication.md)
+- [Cross-site scripting (XSS)](portswigger-xss.md)
