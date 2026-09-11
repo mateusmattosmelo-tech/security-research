@@ -16,3 +16,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Prototype pollution to RCE](prototype-pollution-rce.md)
 - [Server-side template injection (SSTI)](ssti.md)
 - [Deserialization & gadget chains](deserialization-gadgets.md)
+- [Command & argument injection](command-injection.md)
+- [Cloud IAM privilege escalation](iam-privesc.md)
