@@ -54,6 +54,11 @@ Reusable playbooks, refined on real (authorized) engagements.
 - [Scope & disclosure hygiene](methodology/scope-and-disclosure-hygiene.md)
 - [Writing a vulnerability report that doesn't get downgraded](methodology/writing-a-vulnerability-report.md)
 
+## Deep dives
+
+Byte-level, mechanic-first treatments — see [`deep-dives/`](deep-dives/).
+`jwt-attacks` · `ssrf-cloud-and-internal` · `oauth-attacks` · `sql-injection`
+
 ## Tools
 
 Small, self-contained scripts — see [`tools/`](tools/) for the full index.

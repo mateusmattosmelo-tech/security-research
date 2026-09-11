@@ -8,3 +8,6 @@ All content is for authorized testing and defense. Techniques here are publicly 
 point is understanding them well enough to find, exploit (on systems you may test), and fix them.
 
 - [JWT attacks](jwt-attacks.md)
+- [SSRF to cloud metadata & internal services](ssrf-cloud-and-internal.md)
+- [OAuth 2.0 attacks](oauth-attacks.md)
+- [SQL injection](sql-injection.md)
