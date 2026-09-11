@@ -20,3 +20,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Cloud IAM privilege escalation](iam-privesc.md)
 - [Access control & IDOR](access-control-and-idor.md)
 - [Race conditions](race-conditions.md)
+- [Prompt injection & LLM agent exploitation](prompt-injection.md)
+- [NoSQL injection](nosql-injection.md)
