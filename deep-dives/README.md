@@ -18,3 +18,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Deserialization & gadget chains](deserialization-gadgets.md)
 - [Command & argument injection](command-injection.md)
 - [Cloud IAM privilege escalation](iam-privesc.md)
+- [Access control & IDOR](access-control-and-idor.md)
+- [Race conditions](race-conditions.md)
