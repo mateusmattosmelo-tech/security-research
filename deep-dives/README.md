@@ -32,3 +32,6 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Payment & e-commerce business logic](payment-business-logic.md)
 - [WebSocket attacks](websocket-attacks.md)
 - [XS-Leaks (cross-site leaks)](xs-leaks.md)
+- [DNS rebinding](dns-rebinding.md)
+- [Git exposure & secrets in history](git-exposure-and-secrets.md)
+- [HTTP parameter pollution](http-parameter-pollution.md)
