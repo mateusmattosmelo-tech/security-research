@@ -28,3 +28,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Mobile attacks (Android/iOS)](mobile-attacks.md)
 - [Web cache deception](web-cache-deception.md)
 - [Path traversal & file inclusion](path-traversal-lfi.md)
+- [Cross-origin data theft (CORS & postMessage)](cors-and-postmessage.md)
+- [Payment & e-commerce business logic](payment-business-logic.md)
