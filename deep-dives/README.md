@@ -30,3 +30,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Path traversal & file inclusion](path-traversal-lfi.md)
 - [Cross-origin data theft (CORS & postMessage)](cors-and-postmessage.md)
 - [Payment & e-commerce business logic](payment-business-logic.md)
+- [WebSocket attacks](websocket-attacks.md)
+- [XS-Leaks (cross-site leaks)](xs-leaks.md)
