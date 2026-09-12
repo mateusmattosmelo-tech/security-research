@@ -22,3 +22,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [Race conditions](race-conditions.md)
 - [Prompt injection & LLM agent exploitation](prompt-injection.md)
 - [NoSQL injection](nosql-injection.md)
+- [SAML XML signature wrapping](saml-xsw.md)
+- [GraphQL attacks](graphql-attacks.md)
