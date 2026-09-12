@@ -36,3 +36,4 @@ targets/neon/
 
 # methodology notes whose names trip the secret patterns above
 !methodology/secrets-scanning.md
+!deep-dives/git-exposure-and-secrets.md
