@@ -26,3 +26,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [GraphQL attacks](graphql-attacks.md)
 - [Account takeover chains](account-takeover-chains.md)
 - [Mobile attacks (Android/iOS)](mobile-attacks.md)
+- [Web cache deception](web-cache-deception.md)
+- [Path traversal & file inclusion](path-traversal-lfi.md)
