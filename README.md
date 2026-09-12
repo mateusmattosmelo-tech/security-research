@@ -8,6 +8,9 @@ hypotheses I test, and the ones that go nowhere are all part of the craft.
 
 Reusable playbooks, refined on real (authorized) engagements.
 
+**Approach**
+- [Threat modeling for offensive recon](methodology/threat-modeling.md)
+
 **Recon & mapping**
 - [Recon playbook](methodology/recon-playbook.md)
 - [Recon from a target's open source](methodology/recon-from-open-source.md)
