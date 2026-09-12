@@ -24,3 +24,5 @@ point is understanding them well enough to find, exploit (on systems you may tes
 - [NoSQL injection](nosql-injection.md)
 - [SAML XML signature wrapping](saml-xsw.md)
 - [GraphQL attacks](graphql-attacks.md)
+- [Account takeover chains](account-takeover-chains.md)
+- [Mobile attacks (Android/iOS)](mobile-attacks.md)
